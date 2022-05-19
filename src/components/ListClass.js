@@ -55,7 +55,7 @@ class ListClass extends Component {
               {s.text}
               <span id="del" 
                 onClick={() => {
-                this.deleteSeason(s.id);}}
+                this.deleteSeason(s.id)}}
                 class="material-symbols-outlined"
               >
                 delete_forever

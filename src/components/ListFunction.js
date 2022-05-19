@@ -30,7 +30,9 @@ const ListFunction = () => {
 
   return (
     <div>
-      <input type="text" name="inputText" onChange={changeText}></input>
+      <input 
+      placeholder="메모를 적어주세요"
+      type="text" name="inputText" onChange={changeText}></input>
       <button onClick={getText}>추가</button>
       <ul>
         {season.map((s) => (
@@ -38,9 +40,14 @@ const ListFunction = () => {
             key={s.id}
           >
             {s.text}
-            <button onClick={() => {
-              deleteSeason(s.id);
-            }}>X</button>
+            
+            <span id="del" 
+                onClick={() => {
+                deleteSeason(s.id)}}
+                class="material-symbols-outlined"
+              >
+                delete_forever
+              </span>
           </li>
         ))}
       </ul>
